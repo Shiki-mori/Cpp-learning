@@ -1,0 +1,13 @@
+first attempt to commit
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   README.md
+#	new file:   notes/CommitTest.md
+#	new file:   src/readme.txt
+#
