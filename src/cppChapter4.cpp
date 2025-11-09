@@ -530,29 +530,62 @@
 //   return pn;
 // }
 
-// 4.23 mixtypes.cpp -- some type combinations
-#include <iostream>
-using namespace std;
-struct antarctica_years_end {
-  int year;
-  // some really interesting data, etc.
-};
+// // 4.23 mixtypes.cpp -- some type combinations
+// #include <iostream>
+// using namespace std;
+// struct antarctica_years_end {
+//   int year;
+//   // some really interesting data, etc.
+// };
 
-int main() {
-  antarctica_years_end s01, s02, s03;
-  s01.year = 2077;
-  antarctica_years_end *pa = &s02;
-  pa->year = 2078;
-  antarctica_years_end trio[3];
-  trio[0].year = 2003;
-  cout << trio->year << endl;
+// int main() {
+//   antarctica_years_end s01, s02, s03;
+//   s01.year = 2077;
+//   antarctica_years_end *pa = &s02;
+//   pa->year = 2078;
+//   antarctica_years_end trio[3];
+//   trio[0].year = 2003;
+//   cout << trio->year << endl;
 
-  const antarctica_years_end *arp[3] = {&s01, &s02, &s03};
-  cout << arp[1]->year << endl;
-  const antarctica_years_end **ppa = arp;
-  auto ppb = arp;
-  cout << (*ppa)->year << endl;
-  cout << (*(ppb + 1))->year << endl;
+//   const antarctica_years_end *arp[3] = {&s01, &s02, &s03};
+//   cout << arp[1]->year << endl;
+//   const antarctica_years_end **ppa = arp;
+//   auto ppb = arp;
+//   cout << (*ppa)->year << endl;
+//   cout << (*(ppb + 1))->year << endl;
 
-  return 0;
-}
+//   return 0;
+// }
+
+// // 4.24 choices.cpp --array variations
+// #include <array> //C++11
+// #include <iostream>
+// #include <vector> //STL C++98
+
+// int main() {
+//   using namespace std;
+//   double a1[4] = {1.2, 2.4, 3.6, 4.8};
+//   vector<double> a2(4);
+//   // no simple way to initialize in C98
+//   a2[0] = 1.0 / 3.0;
+//   a2[1] = 1.0 / 5.0;
+//   a2[2] = 1.0 / 7.0;
+//   a2[3] = 1.0 / 9.0;
+//   // C++11 -- create and initialize array object
+//   array<double, 4> a3 = {3.14, 2.72, 1.62, 1.41};
+//   array<double, 4> a4;
+//   a4 = a3; // valid for array objects of same size
+
+//   cout << "a1[2]: " << a1[2] << " at " << &a1[2] << endl;
+//   cout << "a2[1]: " << a2[1] << " at " << &a2[1] << endl;
+
+//   // misdeed
+//   a1[-2] = 20.2;
+//   cout << "a1[-2]: " << a1[-2] << " at " << &a1[-2] << endl;
+//   cout << "a3[2]: " << a3[2] << " at " << &a3[2] << endl;
+//   cout << "a2[1]: " << a2[1] << " at " << &a2[1] << endl;
+//   cout << "a1[2]: " << a1[2] << " at " << &a1[2] << endl;
+//   cout << "a4[3]: " << a4[3] << " at " << &a4[3] << endl;
+
+//   return 0;
+// }
